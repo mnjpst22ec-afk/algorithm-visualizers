@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Algorithm Visualizer with Sound</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="left">
+    <h1>Algorithm Visualizer</h1>
+    <div class="controls">
+      <label>Algorithm</label>
+      <select id="algo">
+        <option value="linear">Linear Search</option>
+        <option value="binary">Binary Search</option>
+        <option value="bubble">Bubble Sort</option>
+      </select>
+
+      <label>Array</label>
+      <input id="arrayInput" type="text" placeholder="e.g. 36,9,38,11,28">
+
+      <label>Search Value</label>
+      <input id="search" type="number" placeholder="Only for search">
+
+      <button id="start">▶ Run</button>
+      <button id="pause">⏸ Pause</button>
+      <button id="reset">⏹ Reset</button>
+
+      <label><input type="checkbox" id="stepMode"> Step Mode</label>
+      <button id="nextStep" disabled>➡ Next Step</button>
+    </div>
+
+    <div class="panel">
+      <label>Speed</label>
+      <input id="speed" type="range" min="100" max="1500" step="100" value="600">
+      <span id="speedVal">600ms</span>
+
+      <label>Order</label>
+      <select id="order">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </div>
+
+    <div id="viz"></div>
+    <div id="status">Status: Ready</div>
+    <div id="iterations">Iterations: 0</div>
+    <div id="complexity">Complexity: -</div>
+  </div>
+
+  <div class="right">
+    <h2>Pseudocode</h2>
+    <pre id="pseudocode"></pre>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
