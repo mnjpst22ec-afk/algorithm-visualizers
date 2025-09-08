@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b1220;
+  color: #eee;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.right {
+  flex: 1;
+  background: #111827;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+h1 { color: #8b5cf6; }
+
+.controls {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input, select, button, label {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #111827;
+  color: #eee;
+  font-size: 13px;
+}
+
+button { cursor: pointer; }
+
+#viz {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  background: #111;
+  padding: 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.bar {
+  flex: 1 0 14px;
+  min-width: 14px;
+  border-radius: 4px;
+  position: relative;
+  transition: all .3s ease;
+}
+
+.bar-label {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  text-align: center;
+  font-size: 9px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.state-default { background: linear-gradient(180deg, #8b5cf6, #22d3ee); }
+.state-active { background: linear-gradient(180deg, #f59e0b, #fbbf24); }
+.state-found { background: linear-gradient(180deg, #10b981, #34d399); }
+.state-compare { background: linear-gradient(180deg, #3b82f6, #60a5fa); }
+.state-swap { background: linear-gradient(180deg, #ef4444, #f87171); }
+
+#status, #complexity, #iterations {
+  margin-top: 12px;
+  padding: 10px;
+  background: #111827;
+  border-radius: 8px;
+}
+
+pre { font-size: 13px; line-height: 1.5em; }
+
+.highlight {
+  background: #374151;
+  color: #fbbf24;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.panel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
